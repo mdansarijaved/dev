@@ -38,6 +38,7 @@ model User {
   sessions      Session[]
   accounts      Account[]
   posts         Post[]
+  role          UserRole  @default(MEMBER)
 
   @@unique([email])
   @@map("user")
@@ -86,4 +87,10 @@ model Verification {
   updatedAt  DateTime @default(now()) @updatedAt
 
   @@map("verification")
+}
+
+enum UserRole {
+  SUPERADMIN
+  ADMIN
+  MEMBER
 }
