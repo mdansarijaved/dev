@@ -190,11 +190,7 @@ exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
 };
-exports.UserRole = exports.$Enums.UserRole = {
-  SUPERADMIN: 'SUPERADMIN',
-  ADMIN: 'ADMIN',
-  MEMBER: 'MEMBER'
-};
+
 
 exports.Prisma.ModelName = {
   Post: 'Post',

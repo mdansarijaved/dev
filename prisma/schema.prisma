@@ -38,7 +38,7 @@ model User {
   sessions      Session[]
   accounts      Account[]
   posts         Post[]
-  role          UserRole  @default(MEMBER)
+  role          String  @default("user")
 
   @@unique([email])
   @@map("user")
@@ -89,8 +89,3 @@ model Verification {
   @@map("verification")
 }
 
-enum UserRole {
-  SUPERADMIN
-  ADMIN
-  MEMBER
-}
